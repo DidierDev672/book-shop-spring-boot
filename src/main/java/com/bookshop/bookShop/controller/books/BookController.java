@@ -1,5 +1,6 @@
 package com.bookshop.bookShop.controller.books;
 
+import com.bookshop.bookShop.DTO.BookDTO;
 import com.bookshop.bookShop.entity.book.BookEntity;
 import com.bookshop.bookShop.service.books.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ public class BookController {
     private BookService bookService;
 
     @GetMapping("/book-all")
-    public Optional<List<BookEntity>> getAll(){
+    public Optional<List<BookDTO>> getAll() throws Exception{
         return bookService.getAll();
     }
 
